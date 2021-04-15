@@ -7,6 +7,7 @@ def bfs(h,w,graph):
     dh = [-1, 1, 0, 0]
     dw = [0, 0, -1, 1]
     q = deque()
+    # 만약, 저장될 때부터 모든 토마토가 익어있는 상태이면 0을 출력
     time = -1 # 처음 토마토는 주어질때부터 익어있었으므로 시간이 0으로 되야함
     for i in range(h): # 익은 토마토가 있으면 queue에 추가
         for j in range(w):
