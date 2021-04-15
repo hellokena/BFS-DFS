@@ -14,7 +14,7 @@ def bfs(h,w,graph):
                 q.append((i,j))
     while q:
         time += 1
-        for _ in range(len(q)): # **
+        for _ in range(len(q)): # ** 한번에 넣은 토마토는 한번에 접근함
             pop_h,pop_w = q.popleft() # 큐에서 pop
             for i in range(4): # 상하좌우 위치 이동
                 nh = pop_h + dh[i]
@@ -35,7 +35,7 @@ def solution():
 
     checker = True
 
-    for i in graph: # graph를 h대로 for문 돌리는 것
+    for i in graph:
         if 0 in i:
             checker = False
             print(-1)
@@ -45,4 +45,3 @@ def solution():
         print(time)
 
 solution()
-
