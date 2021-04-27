@@ -18,8 +18,7 @@ def dfs(hidx, widx, cnt):
         if 0<=nh<height and 0<=nw<width:
             if visited[ord(graph[nh][nw])-65] == 0:
                 dfs(nh, nw, cnt+1)
-                visited[ord(graph[nh][nw])-65] = 0
-
+                visited[ord(graph[nh][nw])-65] = 0 # 백트래킹
 
 #for i in range(height):
 #    for j in range(width):
